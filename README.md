@@ -113,3 +113,17 @@ Qassem-Sales-Analytics/
 ## License
 
 This project is licensed under the MIT License.
+
+
+## Reproducible example
+
+Use Python 3.10 or later and the included example CSV:
+
+```sh
+python -m pip install -e '.[dev]'
+python -m pytest -q
+qsales summary examples/sample_sales.csv
+qsales forecast examples/sample_sales.csv --periods 6
+```
+
+Tests cover core aggregation, KPIs and a moving-average forecast. The forecast is a simple baseline and the repository does not report a validated forecast benchmark. Use the working sample CSV for repeatable CLI examples. Verify the data and workbook provenance before redistributing the historical notebook or spreadsheet. See [LICENSE](LICENSE) for repository licensing.
